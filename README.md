@@ -4,10 +4,10 @@ Vision-language (VL) datasets are essential for advancing the capabilities of VL
 
 Instructions: 
 
-Download: Access and extract the dataset to organize it into Images/ and Captions/ folders.
+(a) Download: Access and extract the dataset to organize it into Images/ and Captions/ folders.
 
-Usage: Pair image patches with corresponding captions for training or evaluation tasks.
+(b) Usage: Pair image patches with corresponding captions for training or evaluation tasks.
 
-Applications: Use the dataset for tasks like medical report generation or skin disease classification.
+(c) Applications: Use the dataset for tasks like medical report generation or skin disease classification.
 
-Citation: Cite the dataset appropriately in any publications.
+(d) Citation: Cite the dataset appropriately in any publications.
