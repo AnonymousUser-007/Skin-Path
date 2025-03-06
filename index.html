@@ -11,18 +11,19 @@
             padding: 0;
             line-height: 1.6;
             font-size: 20px;
-            background-color: #f8f8f8;
+            background-color: #f8f8f8; /* Set background color to match the page */
         }
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 1100px; /* Increase width to reduce margins */
+            margin: auto; /* Keep centered */
             background: white;
             padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for better appearance */
         }
         header {
             background: #4CAF50;
             color: white;
-            height: 250px;
+            height: 220px; /* Reduce header height slightly */
             padding: 20px;
             text-align: center;
         }
@@ -44,12 +45,6 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
-        }
-        figcaption {
-            font-size: 16px;
-            color: #555;
-            text-align: center;
-            margin-top: 10px;
         }
         .button-group a {
             text-decoration: none;
@@ -125,26 +120,6 @@
     </section>
 
     <section>
-        <h2>Research Objectives</h2>
-        <p>The primary goal of the Skin-Path dataset is to provide a high-quality vision-language dataset for advancing AI-driven pathology research, particularly in skin cancer diagnosis and histopathological analysis. Specific objectives include:</p>
-        <ul>
-            <li>Enhance VL model performance in histopathology.</li>
-            <li>Support automated medical report generation and skin disease classification.</li>
-            <li>Enable multimodal learning for medical AI.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Dataset Details</h2>
-        <ul>
-            <li>Images: 194 whole slide images (WSIs) at 20× magnification.</li>
-            <li>Patches: 277,761 image patches (300×300 px).</li>
-            <li>Annotations: Pathologist-verified captions.</li>
-            <li>Diseases: 10 types, including basal cell carcinoma & squamous cell carcinoma.</li>
-        </ul>
-    </section>
-
-    <section>
         <h2>Dataset Access</h2>
         <ul>
             <li><strong>Download & Usage</strong></li>
@@ -169,16 +144,6 @@ Skin-Path/
             <img src="Example_good.png" alt="Figure 2" style="width:100%; height:auto;">
             <figcaption>Figure 2: Word cloud of the Skin-Path dataset.</figcaption>
         </figure>
-    </section>
-
-    <section>
-        <h2>Terms of Use</h2>
-        <ul>
-            <li>Research-only: Not for commercial use without permission.</li>
-            <li>Ethical compliance required for medical AI applications.</li>
-            <li>Cite the dataset in any publications.</li>
-            <li>No redistribution, refer others to the official page.</li>
-        </ul>
     </section>
 
     <footer>
