@@ -6,26 +6,37 @@
     <title>Skin-Path Dataset</title>
     <style>
         body {
-            font-family: 'humanist', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            font-size:23px;
+            font-size: 20px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
         }
         header {
             background: #4CAF50;
             color: white;
             height: 250px;
-            padding: 10px 20px;
+            padding: 20px;
             text-align: center;
         }
         section {
             padding: 20px;
-            margin: 10px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
         }
         h2 {
-            font-size:28px;
+            font-size: 26px;
             color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
         }
         footer {
             background: #333;
@@ -51,14 +62,36 @@
             transition: background-color 0.3s, color 0.3s;
             margin: 10px;
         }
-
         .button-group a:hover {
             background-color: white;
             color: #3a8dff;
         }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 48%;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", monospace;
+        }
     </style>
 </head>
 <body>
+
+<div class="container">
     <header>
         <h1>Skin-Path: A Vision-Language Dataset for Skin Cancer Pathology</h1>
         <p>A high-quality vision-language dataset for advancing AI-driven skin pathology research.</p>
@@ -69,12 +102,28 @@
             <a href="#">Poster</a>
         </div>
     </header>
+
     <section>
         <h2>Abstract</h2>
         <p>
             Existing pathology VL datasets (eg. PathCap, OpenPath, QUILT) suffer from low image quality, poor text-image alignment, and limited scalability, especially in skin cancer pathology. To bridge this gap, we introduce Skin-Path, a high-quality VL dataset curated from 194 H&E-stained WSIs at 20× magnification, with 277,761 image patches (300×300 px) and expert-annotated captions. Covering 10 skin diseases (e.g., seborrhoeic keratosis, basal cell carcinoma, squamous cell carcinoma), Skin-Path enables VL model training, medical report generation, and disease classification.
         </p>
     </section>
+
+    <section>
+        <h2>Visual Examples</h2>
+        <div class="image-container">
+            <figure>
+                <img src="MMG.png" alt="Figure 1(a)">
+                <figcaption>Figure 1(a): Examples of WSI with associated captions and patches extracted at ×20 magnification.</figcaption>
+            </figure>
+            <figure>
+                <img src="MRD.png" alt="Figure 1(b)">
+                <figcaption>Figure 1(b): Example of basal cell carcinoma (BCC) slide with associated captions and patches.</figcaption>
+            </figure>
+        </div>
+    </section>
+
     <section>
         <h2>Research Objectives</h2>
         <p>The primary goal of the Skin-Path dataset is to provide a high-quality vision-language dataset for advancing AI-driven pathology research, particularly in skin cancer diagnosis and histopathological analysis. Specific objectives include:</p>
@@ -84,6 +133,7 @@
             <li>Enable multimodal learning for medical AI.</li>
         </ul>
     </section>
+
     <section>
         <h2>Dataset Details</h2>
         <ul>
@@ -93,47 +143,34 @@
             <li>Diseases: 10 types, including basal cell carcinoma & squamous cell carcinoma.</li>
         </ul>
     </section>
+
     <section>
-    <h2>Dataset Access</h2>
-    <ul>
-        <li><strong>Download & Usage</strong></li>
-    </ul>
-    <p><strong>Download:</strong> The dataset demo can be downloaded at 
-        <a href="https://drive.google.com/drive/folders/1cA2fcVJmkMyk0q3Lh6ip0xXdosgRxBbM?usp=drive_link" target="_blank">
-            Google Drive Link
-        </a>. 
-        The full version will be available soon.
-    </p>
-    <p><strong>Extract into:</strong></p>
-    <pre><code>
+        <h2>Dataset Access</h2>
+        <ul>
+            <li><strong>Download & Usage</strong></li>
+        </ul>
+        <p><strong>Download:</strong> The dataset demo can be downloaded at 
+            <a href="https://drive.google.com/drive/folders/1cA2fcVJmkMyk0q3Lh6ip0xXdosgRxBbM?usp=drive_link" target="_blank">
+                Google Drive Link
+            </a>. 
+            The full version will be available soon.
+        </p>
+        <p><strong>Extract into:</strong></p>
+        <pre><code>
 Skin-Path/
 ├── Images/     # Image patches
 ├── Captions/   # Corresponding diagnostic reports
-    </code></pre>
-</section>
-<section>
-        <h2>Visual Examples</h2>
-        <ul>
-            <li><a>Sample Image-Caption Pairs.</a></li>
-        </ul>
-        <div style="display: flex; justify-content: center; gap: 20px;">
-            <figure style="text-align: center;">
-                <img src="MMG.png" alt="figure 2" style="width:100%; height:auto;">
-                <figcaption>Figure 1(a): Examples of WSI with associated captions and patches extracted at ×20 magnification.</figcaption>
-            </figure>
-            <figure style="text-align: center;">
-                <img src="MRD.png" alt="figure 3" style="width:100%; height:auto;">
-                <figcaption>Figure 1(b): Example of basal cell carcinoma (BCC) slide with associated captions and patches.</figcaption>
-            </figure>
-        </div>
-        <ul>
-            <li><a>Word Cloud Representation.</a></li>
-        </ul>
-        <figure style="text-align: center;">
-            <img src="Example_good.png" alt="figure 4" style="width:85%; height:auto;">
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Word Cloud Representation</h2>
+        <figure>
+            <img src="Example_good.png" alt="Figure 2" style="width:100%; height:auto;">
             <figcaption>Figure 2: Word cloud of the Skin-Path dataset.</figcaption>
         </figure>
     </section>
+
     <section>
         <h2>Terms of Use</h2>
         <ul>
@@ -147,5 +184,7 @@ Skin-Path/
     <footer>
         <p>© All rights reserved.</p>
     </footer>
+</div>
+
 </body>
 </html>
